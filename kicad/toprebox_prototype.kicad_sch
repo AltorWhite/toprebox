@@ -1436,7 +1436,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:YAAJ_BlackPill_1"
 			(at 106.68 43.18 0)
 			(effects
 				(font

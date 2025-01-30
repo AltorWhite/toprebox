@@ -3987,7 +3987,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cipulot_parts:TSSOP16"
+		(property "Footprint" "footprints:TSSOP16"
 			(at 127 95.25 0)
 			(effects
 				(font
@@ -4470,7 +4470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cipulot_parts:TSSOP16"
+		(property "Footprint" "footprints:TSSOP16"
 			(at 149.86 135.89 0)
 			(effects
 				(font
