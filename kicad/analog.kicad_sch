@@ -1145,12 +1145,6 @@
 		)
 	)
 	(junction
-		(at 115.57 147.32)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05c2b8fb-57f5-4548-b49a-0dbc559d1528")
-	)
-	(junction
 		(at 128.27 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1283,6 +1277,12 @@
 		(uuid "86d0ec4c-343d-4feb-abfa-cbd4b8ee0142")
 	)
 	(junction
+		(at 115.57 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88f8179a-c49b-4e46-bdb4-2fdbfcabd395")
+	)
+	(junction
 		(at 121.92 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1391,6 +1391,12 @@
 		(uuid "f8b35cb6-ad0e-43c9-b836-f51e0c49b4be")
 	)
 	(junction
+		(at 115.57 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8f3a7d7-674b-40a6-811d-996534f62493")
+	)
+	(junction
 		(at 248.92 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1475,6 +1481,16 @@
 			(type default)
 		)
 		(uuid "1a1fea30-f72c-4509-a4e0-95159148fcd9")
+	)
+	(wire
+		(pts
+			(xy 86.36 128.27) (xy 115.57 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a57dc77-f7a3-43e4-af42-3f10ae2906a6")
 	)
 	(wire
 		(pts
@@ -1948,16 +1964,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 128.27) (xy 115.57 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ab2f42e-5216-47bc-8171-b676f3a340be")
-	)
-	(wire
-		(pts
 			(xy 147.32 147.32) (xy 149.86 147.32)
 		)
 		(stroke
@@ -1985,6 +1991,16 @@
 			(type default)
 		)
 		(uuid "7e00d36a-a727-4981-ae1c-aa2dd580d148")
+	)
+	(wire
+		(pts
+			(xy 115.57 128.27) (xy 115.57 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f4a4904-7253-4848-8e35-30ce662bef84")
 	)
 	(wire
 		(pts
@@ -2138,6 +2154,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 147.32) (xy 121.92 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "989f071f-8274-49f5-a756-08e0b92966b9")
+	)
+	(wire
+		(pts
 			(xy 239.395 109.22) (xy 240.665 109.22)
 		)
 		(stroke
@@ -2178,6 +2204,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 128.27) (xy 139.7 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4c85731-f65c-438f-b898-3fd5eebb9880")
+	)
+	(wire
+		(pts
 			(xy 138.43 68.58) (xy 140.97 68.58)
 		)
 		(stroke
@@ -2215,16 +2251,6 @@
 			(type default)
 		)
 		(uuid "af01e440-fa09-4b98-bedc-1688460f2977")
-	)
-	(wire
-		(pts
-			(xy 115.57 147.32) (xy 121.92 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b15a5f67-6b67-42c3-9c3d-83b47b3421da")
 	)
 	(wire
 		(pts
@@ -2338,16 +2364,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 128.27) (xy 115.57 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2180942-0b57-4b81-89cb-543fe89bb509")
-	)
-	(wire
-		(pts
 			(xy 73.66 105.41) (xy 73.66 106.68)
 		)
 		(stroke
@@ -2395,6 +2411,16 @@
 			(type default)
 		)
 		(uuid "ca754f7f-2505-47b5-94a4-b43a142a9bfa")
+	)
+	(wire
+		(pts
+			(xy 115.57 146.05) (xy 115.57 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb359b07-6833-4863-8a4d-2f291e663a60")
 	)
 	(wire
 		(pts
@@ -4787,6 +4813,84 @@
 			(project "toprebox_prototype"
 				(path "/8da5c518-ba63-450e-856e-258a7a1195e6/1693d11f-4de1-427b-b922-4b4751bb19d2"
 					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 115.57 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aba4779d-9356-4a9e-ba79-2c1d4d55d1cb")
+		(property "Reference" "R1"
+			(at 116.84 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 116.84 143.2814 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 113.792 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.57 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25741"
+			(at 115.57 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cb118dfa-890a-4fa5-a3e0-6d464d88d683")
+		)
+		(pin "2"
+			(uuid "e407ea87-e654-4dc9-a59d-d38712dac069")
+		)
+		(instances
+			(project "toprebox_prototype"
+				(path "/8da5c518-ba63-450e-856e-258a7a1195e6/1693d11f-4de1-427b-b922-4b4751bb19d2"
+					(reference "R1")
 					(unit 1)
 				)
 			)
