@@ -1060,7 +1060,7 @@
 			(uuid "dfc45e6a-26e8-4589-99d9-b0172f26a762")
 		)
 		(instances
-			(project ""
+			(project "toprebox_prototype"
 				(path "/8da5c518-ba63-450e-856e-258a7a1195e6"
 					(reference "U2")
 					(unit 1)
