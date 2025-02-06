@@ -1,0 +1,83 @@
+points:
+  key.padding: u
+  zones:
+
+    matrix:
+      anchor:
+        rotate: 5
+      columns:
+        outerpinky:
+        pinky:
+        ring:
+          key.splay: -8
+          key.origin: [-12, -19]
+          key.stagger: 12
+        middle:
+          key.stagger: 5
+        index:
+          key.splay: -7
+          key.stagger: -6
+        inner:
+          key.stagger: -7
+      rows:
+        bottom:
+        home:
+        top:
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-1.75u, -19]
+      columns:
+        outer:
+          key:
+            shift: [-0.3u]
+            rotate: 
+        middle:
+          key:
+            width: 1.25u
+            shift: [-0.15u]
+        home:
+          key.spread: 1u 
+          key.origin: [-11.75, -9]
+        bottom:
+          key:
+            shift: [-1.u,-1u]
+            width: 1.25u
+        bottomleft:
+          key:
+            shift: [-3.15u,-1u]
+  rotate: -20
+  mirror: &mirror
+    ref: matrix_inner_top
+    shift: [10.5,0]
+    distance: 22
+outlines:
+      topre:
+        - what: rectangle
+          where: true
+          size: [14.6,14]
+          bevel: 1
+      pcb:
+        - what: polygon
+          operation: stack
+          points:
+            - ref: matrix_outerpinky_bottom
+              shift: [-0.5u,-u]
+            - ref: matrix_outerpinky_top
+              shift: [-1.2u,0.4u]
+
+            - ref: mirror_matrix_outerpinky_top
+              shift: [-1.2u,0.4u]
+            - ref: mirror_matrix_outerpinky_bottom
+              shift: [-0.5u,-u]
+
+            - ref: mirror_thumbfan_bottom
+              shift: [-0.25u,-u]
+
+            - ref: thumbfan_bottom
+              shift: [-0.25u,-u]
+
+      Topre_Plate:
+        - name: pcb
+        - operation: subtract
+          name: topre
