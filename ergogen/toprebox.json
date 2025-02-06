@@ -15,10 +15,10 @@ points:
         middle:
           key.stagger: 5
         index:
-          key.splay: -5
+          key.splay: -7
           key.stagger: -6
         inner:
-          key.stagger: -2
+          key.stagger: -7
       rows:
         bottom:
         home:
@@ -39,6 +39,7 @@ points:
         home:
           key.spread: 1u 
           key.origin: [-11.75, -9]
+          
   rotate: -20
   mirror: &mirror
     ref: matrix_inner_top
@@ -55,45 +56,26 @@ outlines:
           operation: stack
           points:
             - ref: matrix_outerpinky_bottom
-              shift: [-0.5u,-0.5u]
+              shift: [-0.5u,-u]
             - ref: matrix_outerpinky_top
-              shift: [-0.5u,0.5u]
-            - ref: matrix_ring_top
-              shift: [u,u]
+              shift: [-1.2u,0.4u]
 
-            - ref: mirror_matrix_ring_top
-              shift: [u,u]
             - ref: mirror_matrix_outerpinky_top
-              shift: [-0.5u,0.5u]
+              shift: [-1.2u,0.4u]
             - ref: mirror_matrix_outerpinky_bottom
-              shift: [-0.5u,-0.5u]
+              shift: [-0.5u,-u]
 
             - ref: mirror_thumbfan_outer
               shift: [-0.5u,-0.8u]
             - ref: mirror_thumbfan_home
-              shift: [0.5u,-0.5u]
+              shift: [0.5u,-0.7u]
 
             - ref: thumbfan_home
-              shift: [0.5u,-0.5u]
+              shift: [0.5u,-0.7u]
             - ref: thumbfan_outer
               shift: [-0.5u,-0.8u]
-
-      mounting_holes:
-        - what: circle
-          radius: 1
-          operation: stack
-          where:
-            ref: [matrix_ring_top]
-            shift: [10,0]
-        
 
       Topre_Plate:
         - name: pcb
         - operation: subtract
           name: topre
-
-      topreplate:
-        - name: Topre_Plate
-        - operation: subtract
-          name: mounting_holes
-
