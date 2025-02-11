@@ -1,0 +1,116 @@
+points:
+  key.padding: u
+  zones:
+
+    matrix:
+      anchor:
+        rotate: 5
+      columns:
+        outerpinky:
+        pinky:
+        ring:
+          key.splay: -5
+          key.origin: [-12, -19]
+          key.stagger: 12
+        middle:
+          key.stagger: 5
+        index:
+          key.splay: -7
+          key.stagger: -6
+        inner:
+          key.stagger: -7
+      rows:
+        bottom:
+        home:
+        top:
+            
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-1.75u, -19]
+      columns:
+        outer:
+          key:
+            shift: [-0.3u]
+            rotate: 
+        middle:
+          key:
+            width: 1.25u
+            shift: [-0.15u]
+        home:
+          key.spread: 1u 
+          key.origin: [-11.75, -9]
+    
+    num:
+      anchor:
+        ref: matrix_outerpinky_top
+        rotate: 0
+        shift: [-5, 1.1u]
+      columns:
+        outerpinky:
+        pinky:
+        ring:
+          key.splay: -3
+          key.origin: [-20, -2u]
+          key.stagger: 12
+        middle:
+          key.stagger: 5
+        index:
+          key.splay: -5
+          key.origin: [-10, -1.25u]
+          key.stagger: -2
+        inner:
+          key.stagger: -5
+          
+  rotate: -20
+  mirror: &mirror
+    ref: matrix_inner_top
+    shift: [10.5,0]
+    distance: 44
+outlines:
+      topre:
+        - what: rectangle
+          where: true
+          size: [14.6,14]
+          bevel: 1
+      pcb:
+        - what: polygon
+          operation: stack
+          points:
+            - ref: matrix_outerpinky_bottom
+              shift: [-0.4u,-1.5u]
+            - ref: num_outerpinky
+              shift: [-2u, 0.2u]
+
+            - ref: mirror_num_outerpinky
+              shift: [-2u,0.2u]
+            - ref: mirror_matrix_outerpinky_bottom
+              shift: [-0.4u,-1.5u]
+            - ref: mirror_thumbfan_outer
+              shift: [-0.5u,-0.8u]
+            - ref: mirror_thumbfan_home
+              shift: [0.5u,-0.7u]
+
+            - ref: thumbfan_home
+              shift: [0.5u,-0.7u]
+            - ref: thumbfan_outer
+              shift: [-0.5u,-0.8u]
+
+      topre_plate:
+      - name: pcb
+      - operation: subtract
+        name: topre
+
+
+      
+pcbs.toprebox:
+        outlines:
+          main.outline: pcb
+        footprints:
+          placeholder:
+            what: mx
+            where: true
+            params:
+              keycaps: true
+              from: "{{col_net}}"
+              to: "{{row_net}}"
