@@ -45,13 +45,13 @@ points:
       anchor:
         ref: matrix_outerpinky_top
         rotate: 0
-        shift: [-5, 1.1u]
+        shift: [-5, 1.u]
       columns:
         outerpinky:
         pinky:
         ring:
           key.splay: -3
-          key.origin: [-20, -2u]
+          key.origin: [-20 + 2u, -1u]
           key.stagger: 12
         middle:
           key.stagger: 5
@@ -62,7 +62,7 @@ points:
         inner:
           key.stagger: -5
           
-  rotate: -20
+  rotate: -22.5
   mirror: &mirror
     ref: matrix_inner_top
     shift: [10.5,0]
@@ -78,14 +78,14 @@ outlines:
           operation: stack
           points:
             - ref: matrix_outerpinky_bottom
-              shift: [-0.4u,-1.5u]
+              shift: [-1u,-1u]
             - ref: num_outerpinky
-              shift: [-2u, 0.2u]
+              shift: [-1u, 0.5u]
 
             - ref: mirror_num_outerpinky
-              shift: [-2u,0.2u]
+              shift: [-1u,0.5u]
             - ref: mirror_matrix_outerpinky_bottom
-              shift: [-0.4u,-1.5u]
+              shift: [-1u,-1u]
             - ref: mirror_thumbfan_outer
               shift: [-0.5u,-0.8u]
             - ref: mirror_thumbfan_home
@@ -95,9 +95,29 @@ outlines:
               shift: [0.5u,-0.7u]
             - ref: thumbfan_outer
               shift: [-0.5u,-0.8u]
+      
+      plate:
+        - what: polygon
+          operation: stack
+          points:
+            - ref: matrix_outerpinky_bottom
+              shift: [-1u,-1u]
+            - ref: num_outerpinky
+              shift: [-1u, 0.5u]
+            - ref: num_ring
+              shift: [0u,u]
+            - ref: num_inner
+              shift: [u,u]
+            - ref: matrix_inner_top
+              shift: [u,u]
+
+            - ref: thumbfan_home
+              shift: [0.5u,-0.7u]
+            - ref: thumbfan_outer
+              shift: [-0.5u,-0.8u]
 
       topre_plate:
-      - name: pcb
+      - name: plate
       - operation: subtract
         name: topre
 
