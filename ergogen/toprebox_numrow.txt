@@ -101,21 +101,31 @@ outlines:
           operation: stack
           points:
             - ref: matrix_outerpinky_bottom
-              shift: [-1u,-1u]
+              shift: [-0.7u,-0.6u]
             - ref: num_outerpinky
-              shift: [-1u, 0.5u]
+              shift: [-0.6u, 0.6u]
             - ref: num_ring
-              shift: [0u,u]
+              shift: [-0.75u,-0.1u]
+            - ref: num_middle
+              shift: [-1.5u,0.5u]
+            - ref: num_index
+              shift: [-u,0.75u]
             - ref: num_inner
-              shift: [u,u]
+              shift: [0.25u,0.8u]
             - ref: matrix_inner_top
-              shift: [u,u]
+              shift: [0.75u,u]
+            - ref: matrix_inner_bottom
+              shift: [0.75u,-0.45u]
+            - ref: matrix_inner_bottom
+              shift: [1u,-0.55u]
 
             - ref: thumbfan_home
-              shift: [0.5u,-0.7u]
+              shift: [0.75u,-0.7u]
             - ref: thumbfan_outer
-              shift: [-0.5u,-0.8u]
-
+              shift: [-0.75u,-0.8u]
+            - ref: thumbfan_outer
+              shift: [-1u,-0.09u]
+              
       topre_plate:
       - name: plate
       - operation: subtract
@@ -123,9 +133,12 @@ outlines:
 
 
       
-pcbs.toprebox:
+pcbs.toprebox_prototype:
         outlines:
           main.outline: pcb
+          frontswitch:
+            outline: topre
+            layer: F.Silkscreen
         footprints:
           placeholder:
             what: mx
